@@ -438,7 +438,13 @@ variable "content" {
 // ----------------------------------------------------------------------------
 // OWN VARS
 // ----------------------------------------------------------------------------
-variable "private" {
+variable "enable_private_nodes" {
+  description = "Enable private cluster"
+  type        = bool
+  default     = false
+}
+
+variable "enable_private_endpoint" {
   description = "Enable private cluster"
   type        = bool
   default     = false

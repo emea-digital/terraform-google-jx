@@ -180,7 +180,8 @@ module "cluster" {
 
   kuberhealthy = var.kuberhealthy
 
-  private = var.private
+  enable_private_nodes = var.enable_private_nodes
+  enable_private_endpoint = var.enable_private_endpoint
 }
 
 // ----------------------------------------------------------------------------
