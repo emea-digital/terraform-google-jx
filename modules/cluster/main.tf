@@ -27,11 +27,16 @@ resource "google_container_cluster" "jx_cluster" {
   initial_node_count      = var.min_node_count
   logging_service         = var.logging_service
   monitoring_service      = var.monitoring_service
+  networking_mode         = var.networking_mode
 
   private_cluster_config {
     enable_private_nodes = var.enable_private_nodes
     enable_private_endpoint = var.enable_private_endpoint
     master_ipv4_cidr_block = var.master_ipv4_cidr_block
+  }
+
+  ip_allocation_policy {
+    cluster_ipv4_cidr_block = ""
   }
 
   // should disable master auth

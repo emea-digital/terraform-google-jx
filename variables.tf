@@ -294,3 +294,9 @@ variable "master_ipv4_cidr_block" {
   type        = string
   default     = ""
 }
+
+variable "networking_mode" {
+  description = "Determines whether alias IPs or routes will be used for pod IPs in the cluster"
+  type        = string
+  default     = ""
+}
