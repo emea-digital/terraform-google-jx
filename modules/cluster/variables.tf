@@ -434,3 +434,12 @@ variable "content" {
   type        = string
   default     = ""
 }
+
+// ----------------------------------------------------------------------------
+// OWN VARS
+// ----------------------------------------------------------------------------
+variable "private" {
+  description = "Enable private cluster"
+  type        = bool
+  default     = false
+}

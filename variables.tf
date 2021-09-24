@@ -272,3 +272,12 @@ variable "kuberhealthy" {
   type        = bool
   default     = true
 }
+
+// ----------------------------------------------------------------------------
+// OWN VARS
+// ----------------------------------------------------------------------------
+variable "private" {
+  description = "Enable private cluster"
+  type        = bool
+  default     = false
+}

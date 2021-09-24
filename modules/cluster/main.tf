@@ -28,6 +28,11 @@ resource "google_container_cluster" "jx_cluster" {
   logging_service         = var.logging_service
   monitoring_service      = var.monitoring_service
 
+  private_cluster_config {
+    count  = var.private ? 1 : 0
+    enable_private_nodes = var.private
+  }
+
   // should disable master auth
   master_auth {
     username = ""
